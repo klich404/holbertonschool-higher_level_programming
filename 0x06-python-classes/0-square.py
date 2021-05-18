@@ -3,6 +3,7 @@
 This class defines a squeare.
 """
 
+
 class Square:
     """A Squeare"""
     pass
