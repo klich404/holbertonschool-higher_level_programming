@@ -49,4 +49,4 @@ class Rectangle:
                     s += ('#')
                 if i != self.__height - 1:
                     s += '\n'
-            return s
+        return s
