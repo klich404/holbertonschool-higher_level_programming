@@ -1,0 +1,69 @@
+The ``2-matrix_divided`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+``matrix_divided`` from the ``2-matrix_divided`` module:
+
+    >>> matrix_divided = __import__("2-matrix_divided"). matrix_divided
+
+Now use it:
+
+    >>> matrix = [[1, 2], [1, 2, 3, 4], [1, 2, 3]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix = [[], [1, 2, 3]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+
+=======================================
+
+    #checker
+
+    #pep8
+    >>> import os
+    >>> os.popen("pep8 2-matrix_divided.py").read()
+    ''
+
+    #comment
+    >>> comment = __import__("2-matrix_divided").__doc__
+    >>> len(comment) > 4
+    True
+
+    #comment lenght
+    >>> comment = __import__("2-matrix_divided").add_integer.__doc__
+    >>> len(comment) > 2
+    True
+
+    #README
+    >>> import os
+    >>> os.path.exists('README.md')
+    True
+
+    #excecutable
+    >>> import os
+    >>> file = os.getcwd() + '/2-matrix_divided.py'
+    >>> os.access(file, os.X_OK)
+    True
+
+    #shebang
+    >>> with open("2-matrix_divided.py", "r") as file:
+    ...     first = file.readline()
+    ...
+    >>> first == '#!/usr/bin/python3\n'
+    True
+
+    #new line
+    >>> with open("2-matrix_divided.py", "r") as file:
+    ...     for last in file:
+    ...             pass
+    ...
+    >>> last[-1] == '\n'
+    True

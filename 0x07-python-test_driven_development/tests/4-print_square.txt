@@ -1,0 +1,83 @@
+The ``4-print_square`` module
+======================
+
+Using ``print_square``
+-------------------
+
+``print_square`` from the ``4-print_square`` module:
+
+    >>> print_square = __import__("4-print_square"). print_square
+
+Now use it:
+
+    >>> print_square("")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+    >>> print_square("hola")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square(3.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square(0)
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+=======================================
+
+    #checker
+
+    #pep8
+    >>> import os
+    >>> os.popen("pep8 4-print_square.py").read()
+    ''
+
+    #comment
+    >>> comment = __import__("4-print_square").__doc__
+    >>> len(comment) > 4
+    True
+
+    #comment lenght
+    >>> comment = __import__("4-print_square").print_square.__doc__
+    >>> len(comment) > 2
+    True
+
+    #README
+    >>> import os
+    >>> os.path.exists('README.md')
+    True
+
+    #excecutable
+    >>> import os
+    >>> file = os.getcwd() + '/4-print_square.py'
+    >>> os.access(file, os.X_OK)
+    True
+
+    #shebang
+    >>> with open("4-print_square.py", "r") as file:
+    ...     first = file.readline()
+    ...
+    >>> first == '#!/usr/bin/python3\n'
+    True
+
+    #new line
+    >>> with open("4-print_square.py", "r") as file:
+    ...     for last in file:
+    ...             pass
+    ...
+    >>> last[-1] == '\n'
+    True

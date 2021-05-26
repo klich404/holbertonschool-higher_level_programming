@@ -1,0 +1,118 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__("0-add_integer"). add_integer
+
+Now use it:
+
+    >>> add_integer(-2, -3)
+    -5
+
+    >>> add_integer(-2, 3)
+    1
+
+    >>> add_integer('h', 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer("hola", "adios")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer([2])
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1.5, 3)
+    4
+
+    >>> add_integer(, 3)
+    Traceback (most recent call last):
+    ...
+    SyntaxError: invalid syntax
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer({'h': 2}, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, [2])
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer(2^2, 3)
+    3
+
+    >>> add_integer(1, 2, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+=======================================
+
+    #checker
+
+    #pep8
+    >>> import os
+    >>> os.popen("pep8 0-add_integer.py").read()
+    ''
+
+    #comment
+    >>> comment = __import__("0-add_integer").__doc__
+    >>> len(comment) > 4
+    True
+
+    #comment lenght
+    >>> comment = __import__("0-add_integer").add_integer.__doc__
+    >>> len(comment) > 2
+    True
+
+    #README
+    >>> import os
+    >>> os.path.exists('README.md')
+    True
+
+    #excecutable
+    >>> import os
+    >>> file = os.getcwd() + '/0-add_integer.py'
+    >>> os.access(file, os.X_OK)
+    True
+
+    #shebang
+    >>> with open("0-add_integer.py", "r") as file:
+    ...     first = file.readline()
+    ...
+    >>> first == '#!/usr/bin/python3\n'
+    True
+
+    #new line
+    >>> with open("0-add_integer.py", "r") as file:
+    ...     for last in file:
+    ...             pass
+    ...
+    >>> last[-1] == '\n'
+    True

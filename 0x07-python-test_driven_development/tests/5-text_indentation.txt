@@ -1,0 +1,73 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+``text_indentation`` from the ``5-text_indentation`` module:
+
+    >>> text_indentation = __import__("5-text_indentation"). text_indentation
+
+Now use it:
+
+    >>> text_indentation("")
+
+    >>> text_indentation(4)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation(3.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+=======================================
+
+    #checker
+
+    #pep8
+    >>> import os
+    >>> os.popen("pep8 5-text_indentation.py").read()
+    ''
+
+    #comment
+    >>> comment = __import__("5-text_indentation").__doc__
+    >>> len(comment) > 4
+    True
+
+    #comment lenght
+    >>> comment = __import__("5-text_indentation").text_indentation.__doc__
+    >>> len(comment) > 2
+    True
+
+    #README
+    >>> import os
+    >>> os.path.exists('README.md')
+    True
+
+    #excecutable
+    >>> import os
+    >>> file = os.getcwd() + '/5-text_indentation.py'
+    >>> os.access(file, os.X_OK)
+    True
+
+    #shebang
+    >>> with open("5-text_indentation.py", "r") as file:
+    ...     first = file.readline()
+    ...
+    >>> first == '#!/usr/bin/python3\n'
+    True
+
+    #new line
+    >>> with open("5-text_indentation.py", "r") as file:
+    ...     for last in file:
+    ...             pass
+    ...
+    >>> last[-1] == '\n'
+    True

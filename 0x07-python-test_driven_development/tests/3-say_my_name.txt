@@ -1,0 +1,82 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+``say_my_name`` from the ``3-say_my_name`` module:
+
+    >>> say_my_name = __import__("3-say_my_name"). say_my_name
+
+Now use it:
+
+    >>> say_my_name(4, "Johan")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Johan", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name("Johan")
+    My name is Johan 
+
+    >>> say_my_name("", "")
+    My name is  
+
+    >>> say_my_name("Johan", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name(None, "Johan")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+=======================================
+
+    #checker
+
+    #pep8
+    >>> import os
+    >>> os.popen("pep8 3-say_my_name.py").read()
+    ''
+
+    #comment
+    >>> comment = __import__("3-say_my_name").__doc__
+    >>> len(comment) > 4
+    True
+
+    #comment lenght
+    >>> comment = __import__("3-say_my_name").say_my_name.__doc__
+    >>> len(comment) > 2
+    True
+
+    #README
+    >>> import os
+    >>> os.path.exists('README.md')
+    True
+
+    #excecutable
+    >>> import os
+    >>> file = os.getcwd() + '/3-say_my_name.py'
+    >>> os.access(file, os.X_OK)
+    True
+
+    #shebang
+    >>> with open("3-say_my_name.py", "r") as file:
+    ...     first = file.readline()
+    ...
+    >>> first == '#!/usr/bin/python3\n'
+    True
+
+    #new line
+    >>> with open("3-say_my_name.py", "r") as file:
+    ...     for last in file:
+    ...             pass
+    ...
+    >>> last[-1] == '\n'
+    True
