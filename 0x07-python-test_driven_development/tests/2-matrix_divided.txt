@@ -38,7 +38,7 @@ Now use it:
     True
 
     #comment lenght
-    >>> comment = __import__("2-matrix_divided").add_integer.__doc__
+    >>> comment = __import__("2-matrix_divided").matrix_divided.__doc__
     >>> len(comment) > 2
     True
 
