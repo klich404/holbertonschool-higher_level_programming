@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 """
-    a class MyList that inherits from list
+    a class MyList
+    that inherits
+    from list
 """
 
 
 class MyList(list):
-    """my Mylist"""
+    """
+    my Mylist class
+    """
     def __init__(self):
         super().__init__()
 
