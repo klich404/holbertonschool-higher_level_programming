@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 """
-    a class Rectangle that inherits from BaseGeometry (7-base_geometry.py)
+    a class Rectangle that
+    inherits from BaseGeometry
+    (7-base_geometry.py)
 """
 
 
 class BaseGeometry:
-    """a class BaseGeometry"""
+    """
+    a class BaseGeometry
+    """
 
     def area(self):
         raise Exception("area() is not implemented")
@@ -18,7 +22,9 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """a class Rectangle that inherits from BaseGeometry"""
+    """
+    a class Rectangle that inherits from BaseGeometry
+    """
 
     def __init__(self, width, height):
         self.__width = width
