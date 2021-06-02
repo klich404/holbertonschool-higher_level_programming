@@ -1,0 +1,11 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``lookup``
+-------------------
+
+``lookup`` from the ``0-lookup`` module:
+
+    >>> lookup = __import__("0-lookup"). lookup
+
+Now use it:
