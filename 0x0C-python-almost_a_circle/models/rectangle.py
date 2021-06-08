@@ -32,7 +32,7 @@ class Rectangle(Base):
         """
         i = self.id
         w = self.__width
-        h =self.__height
+        h = self.__height
         x = self.__x
         y = self.__y
         return "[Rectangle] ({}) {}/{} - {}/{}".format(i, x, y, w, h)
@@ -66,7 +66,7 @@ class Rectangle(Base):
         """
         i = self.id
         w = self.__width
-        h =self.__height
+        h = self.__height
         x = self.__x
         y = self.__y
         return {'x': x, 'y': y, 'id': i, 'height': h, 'width': w}

@@ -65,7 +65,6 @@ class Square(Rectangle):
             if "y" in kwargs:
                 self.y = kwargs["y"]
 
-
     @property
     def size(self):
         return super().width
