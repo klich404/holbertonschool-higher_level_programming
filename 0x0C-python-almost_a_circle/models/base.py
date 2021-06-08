@@ -74,7 +74,7 @@ class Base:
         Returns a list of instances
         """
         filename = cls.__name__ + ".json"
-        l = ()
+        l = []
         with open(filename, 'r') as file:
             l = cls.from_json_string(file.read())
             for x, y in enumerate(l):
