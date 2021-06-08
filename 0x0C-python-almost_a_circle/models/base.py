@@ -15,11 +15,12 @@ class Base:
     Base class
     """
     __nb_objects = 0
+
     def __init__(self, id=None):
         """
         Assign the public instance attribute id
         """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -30,7 +31,7 @@ class Base:
         """
         Returns the JSON string representation of list_dictionaries
         """
-        if list_dictionaries == None or len(list_dictionaries) == 0:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return json.dump("[]")
         return json.dumps(list_dictionaries)
 
@@ -39,7 +40,7 @@ class Base:
         """
         Writes the JSON string representation of list_objs to a file
         """
-        if list_objs == None or list_objs == []:
+        if list_objs is None or list_objs == []:
             dictionary = []
         else:
             dictionary = [dic.to_dictionary() for dic in list_objs]
@@ -51,7 +52,7 @@ class Base:
         """
         Returns the list of the JSON string representation json_string
         """
-        if json_string == None or len(json_string) == 0:
+        if json_string is None or len(json_string) == 0:
             return json.load("[]")
         return json.loads(json_string)
 
