@@ -21,7 +21,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     """execute SQL query with execute()"""
-    cursor.execute("SELECT * FROM states WHERE states.name LIKE 'N%'\
+    cursor.execute("SELECT * FROM states WHERE states.name LIKE BINARY 'N%'\
         ORDER BY states.id ASC")
 
     """Fetch all the rows with fetchall()"""
