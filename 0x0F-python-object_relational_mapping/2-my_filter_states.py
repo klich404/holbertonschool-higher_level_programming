@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     """execute SQL query with execute()"""
-    cursor.execute("SELECT * FROM states WHERE name = '{}'\
+    cursor.execute("SELECT * FROM states WHERE state.name = '{}'\
         ORDER BY states.id ASC".format(argv[4]))
 
     """Fetch all the rows with fetchall()"""
