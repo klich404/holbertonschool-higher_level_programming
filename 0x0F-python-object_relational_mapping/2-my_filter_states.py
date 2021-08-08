@@ -9,7 +9,7 @@ from sys import argv
 
 if __name__ == "__main__":
     """open database connection"""
-    db = MySQLdb.connect(host="127.0.0.1",
+    db = MySQLdb.connect(host="localhost",
                          port=3306,
                          user=argv[1],
                          password=argv[2],
@@ -20,7 +20,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     """execute SQL query with execute()"""
-    cursor.execute("SELECT * FROM states WHERE name = '{}'".format(argv[4]))
+    cursor.execute("SELECT * FROM states WHERE name = '{}'\
+        ORDER BY states.id ASC".format(argv[4]))
 
     """Fetch all the rows with fetchall()"""
     rows = cursor.fetchall()
