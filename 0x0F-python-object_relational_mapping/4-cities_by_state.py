@@ -22,7 +22,7 @@ if __name__ == "__main__":
     """execute SQL query with execute()"""
     cursor.execute("SELECT cities.id, cities.name, states.name\
         FROM cities, states WHERE cities.state_id = states.id\
-            ORDER BY cities.id ASC", (argv[4],))
+            ORDER BY cities.id ASC")
 
     """Fetch all the rows with fetchall()"""
     rows = cursor.fetchall()
