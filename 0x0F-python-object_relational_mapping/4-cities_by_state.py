@@ -22,7 +22,7 @@ if __name__ == "__main__":
     """execute SQL query with execute()"""
     cursor.execute("SELECT cities.name FROM states INNER JOIN cities ON\
         cities.state_id = states.id WHERE\
-            state.name = %s ORDER BY cities.id", (name, ))
+            state.name = %s ORDER BY cities.id", (argv[4],))
 
     """Fetch all the rows with fetchall()"""
     rows = cursor.fetchall()
