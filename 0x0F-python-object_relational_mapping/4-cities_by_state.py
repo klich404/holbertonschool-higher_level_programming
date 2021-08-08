@@ -16,8 +16,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     """execute SQL query with execute()"""
-    cursor.execute("SELECT cities.id, cities.name, states.name FROM states\
-        INNER JOIN cities ON cities.state_id = states.id ORDER BY cities.id")
+    cursor.execute("SELECT cities.name FROM states INNER JOIN cities ON\
+        cities.state_id = states.id WHERE\
+            state.name = %s ORDER BY cities.id", (argv[4],))
 
     """Fetch all the rows with fetchall()"""
     rows = cursor.fetchall()
