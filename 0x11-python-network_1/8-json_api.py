@@ -15,7 +15,7 @@ if __name__ == "__main__":
     try:
         json_html = html.json()
         if len(json_html) > 0:
-            print("[{}] {}".format(html.text['id'], html.text['name']))
+            print("[{}] {}".format(json_html['id'], json_html['name']))
         else:
             print("No result")
     except:
