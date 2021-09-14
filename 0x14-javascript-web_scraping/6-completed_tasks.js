@@ -12,7 +12,7 @@ request(url, function (error, response, body) {
       if (dictionary[users.userId]) {
         dictionary[users.userId]++;
       } else {
-      dictionary[users.userId] = 1;
+        dictionary[users.userId] = 1;
       }
     }
   }
