@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/* */
+/* Write a script that writes a string to a file. */
 
 const fs = require('fs');
 
