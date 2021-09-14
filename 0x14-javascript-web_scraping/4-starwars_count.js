@@ -3,17 +3,17 @@
 
 const request = require('request');
 const url = 'https://swapi-api.hbtn.io/api/films';
+let films = 0;
 request(url, function (error, response, body) {
   if (error) return console.log('code: ', error);
-  const results = JSON.parse(body).results[0];
-  const characters = results.characters;
-  for (const character of characters) {
-    if (character.endsWith('18/') === true) {
-      request(character, function (error, response, body) {
-        if (error) return console.log('code: ', error);
-        const films = JSON.parse(body).films;
-        console.log(films.length);
-      });
+  const results = JSON.parse(body).results;
+  for (const movies of results) {
+    const characters = movies.characters;
+    for (const character of characters) {
+      if (character.endsWith('18/') === true) {
+        films = films + 1;
+      }
     }
   }
+  console.log(films);
 });
