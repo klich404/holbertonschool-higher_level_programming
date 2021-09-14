@@ -8,7 +8,7 @@ request(url, function (error, response, body) {
   const results = JSON.parse(body).results[0];
   const characters = results.characters;
   for (const character of characters) {
-    if (character.endsWith('18') === true) {
+    if (character.endsWith('18/') === true) {
       request(character, function (error, response, body) {
         if (error) return console.log('code: ', error);
         const films = JSON.parse(body).films;
